@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Lato";
+            src: url("./fonts/Lato/Lato-Regular.ttf");
+        }
+        @font-face {
+            font-family: "Noto";
+            src: url("./fonts/Noto/static/NotoSans-Medium.ttf");
+        }
+        body
+        {
+            background-color: #101010;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container
+        {
+            display: flex;
+            flex-direction: row;
+            background-color: #303030;
+            width: 768px;
+            border-radius: 25px;
+        }
+        .logo
+        {
+            width: 192px;
+            margin: 64px 32px;
+        }
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+        }
+        form span
+        {
+            margin-left: 12px;
+            font-family: "Lato";
+            color: white;
+        }
+
+        form input[type=text]
+        {
+            width: 87%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            height: 40px;
+            padding: 0 20px;
+            background-color: #404040;
+            border-radius: 15px;
+            border: none;
+            color: white;
+        }
+        form input[type=text]:focus
+        {
+            outline: none;
+            background-color: #505050;
+            transition: 0.3s;
+        }
+
+        form input[type=submit]
+        {
+            margin-top: 15px;
+            width: 100px;
+            height: 40px;
+
+            font-size: 14px;
+            color: #2f4457;
+
+            background-color: #98cfff;
+
+            border-radius: 20px;
+            border: none;
+        }
+
+        form input[type=submit]:hover
+        {
+            cursor: pointer;
+            background-color: #77addc;
+        }
+        a
+        {
+            color: #98cfff;
+            font-family: "Lato";
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            width: fit-content;
+            margin: 10px 0;
+        }
+        a:hover
+        {
+            border-radius: 3px;
+            background-color: #98cfff40;
+        }
+
+        .misc
+        {
+            width: 768px;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img class="logo" src="./svg/Firefox_logo,_2019.svg">
+        <form>
+            <span>E-mail</span>
+            <input type="text">
+            <span>Senha</span>
+            <input type="text">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div class="misc">
+        <a href="#">Esqueci minha senha</a>
+    </div>
+</body>
+</html>
