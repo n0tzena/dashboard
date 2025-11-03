@@ -1,0 +1,36 @@
+body
+{
+    background-color: #101010;
+    color: white;
+}
+tr
+{
+    background-color: rgb(24, 24, 24);
+}
+tr:nth-child(odd) 
+{
+    background-color: rgb(49, 49, 49);
+}
+nav ul li a
+{
+    background-color: #1d1d1d;
+    color: white;
+}
+nav ul li a:hover
+{
+    background-color: rgb(40, 40, 40);
+}
+.main-container
+{
+    background-image: linear-gradient(to right, #425568, rgb(89, 73, 104));
+}
+.search-container input[type="text"]
+{
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+.search-container select
+{
+    background-color: rgb(40, 40, 40);
+    color: white;
+}

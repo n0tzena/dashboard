@@ -1,0 +1,268 @@
+@property --nav-width
+{
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 200px;
+}
+
+@font-face {
+    font-family: "Momo";
+    src: url("../fonts/Momo/MomoTrustDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/static/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('../fonts/Roboto/static/Roboto-Regular.ttf');
+}
+
+body
+{
+    margin: 0;
+}
+nav
+{
+    font-family: "Roboto";
+    font-size: 1em;
+    height: 100vh;
+    width: var(--nav-width);
+    position: absolute;
+}
+.dashboard-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-header img
+{
+    height: 40px;
+    display: block;
+    margin: 22px 8px 18px 0px;
+}
+.dashboard-header span
+{
+    display: block;
+    font-family: "Momo";
+}
+nav ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-section
+{
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 10px 0px;
+    width: var(--nav-width);
+}
+nav ul li a
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin: 0px 5px 7px 5px;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    transition: 0.2s;
+    height: 40px;
+}
+
+nav ul li a img
+{
+    height: 20px;
+    position: absolute;
+    left: 15px;
+}
+nav ul li a span
+{
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 24px;
+    display: block;
+}
+
+nav ul li a:hover
+{
+    background-color: rgb(233, 233, 233);
+    transition: 0.2s;
+}
+
+.main
+{
+    margin-left: var(--nav-width);
+    height: 100vh;
+    overflow-y: scroll;
+    transition: 0.1s;
+}
+.nav-disabled
+{
+    transition: 0.1s;
+    margin-left: 0;
+}
+
+.search-container
+{
+    /* troque a altura no .main-container */
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-container input[type="text"]
+{
+    border: none;
+    background-color: rgb(228, 228, 228);
+    height: 44px;
+    border-radius: 10px;
+    padding: 0 12px;
+}
+.search-container select
+{
+    border: none;
+    background-color: rgb(228, 228, 228);
+    height: 44px;
+    border-radius: 10px;
+    padding: 0 12px;
+}
+.search-container input[type="submit"]
+{
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Roboto";
+    max-width: 108px;
+    padding: 0 24px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(46, 75, 105), rgb(136, 92, 141));
+}
+.search-container input[type="submit"]:hover
+{
+    background-image: linear-gradient(to right, rgb(95, 175, 255), rgb(239, 119, 255));
+    cursor: pointer;
+}
+
+.night-mode-container
+{
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    cursor: pointer;
+}
+.night-mode-container img
+{
+    width: 32px;
+    margin: 0 4px;
+}
+
+.nav-button-container
+{
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#moon
+{
+    width: 24px;
+}
+
+.user-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+.user-container span
+{
+    font-family: "Momo";
+    margin-right: 10px;
+}
+.user-container img
+{
+    width: 48px;
+    border-radius: 50%;
+}
+
+.main-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 23px 0px;
+
+    /* mude os pixeis no calculo da altura para corresponder à altura
+       da barra de pesquisa  */
+    min-height: calc(100% - 80px);
+    border-top-left-radius: 10px;
+    background-image: linear-gradient(to right, #6db4ff, rgb(207, 159, 255));
+    overflow-y: auto;
+    transition: 0.5s;
+}
+.main-container-no-border
+{
+    border-top-left-radius: 0;
+    transition: 0.5s;
+}
+
+table
+{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    overflow: hidden;
+    border-radius: 10px;
+    font-family: "Roboto-Regular";
+}
+.max-width
+{
+    width: 100%;
+}
+th, tr, td
+{
+    padding: 15px;
+}
+
+th
+{
+    text-align: left;
+    background-color: #1e2e40;
+    color: white;
+    font-family: "Momo";
+    font-weight: normal;
+}
+tr
+{
+    background-color: rgb(244, 244, 244);
+}
+tr:nth-child(odd) 
+{
+    background-color: rgb(227, 227, 227);
+}
+td
+{
+    transition: 0.2s;
+}
+td:hover
+{
+    background-color: rgba(0, 0, 0, 0.138);
+    transition: 0.2s;
+}
