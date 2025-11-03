@@ -6,6 +6,8 @@
     <title>Dashboard</title>
     <script src="./js/navbar.js"></script>
     <script src="./js/nightmode.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/table.js"></script>
     <link rel="stylesheet" href="./css/dashboard.css">
     <link id="nm" rel="stylesheet" href="./css/dashboard-black.css" disabled="">
 </head>
@@ -19,7 +21,7 @@
             <li><a href="#"><img src="./svg/web-black.svg"><span>This is a text</span></a></li>
             <li><a href="#"><img src="./svg/arrow-black.svg"><span>This is a longer text</span></a></li>
             <li><a href="#"><img src="./svg/Firefox_logo,_2019.svg"><span>This is a very, much, extremely long text</span></a></li>
-            <li><span class="dashboard-section">Administração</span></li>
+            <li><span class="dashboard-section">Admin Section</span></li>
             <li><a href="#"><img src="./svg/web-black.svg"><span>Button 1</span></a></li>
             <li><a href="#"><img src="./svg/arrow-black.svg"><span>Button 2</span></a></li>
             <li><a href="#"><img src="./svg/Firefox_logo,_2019.svg"><span>Button 3</span></a></li>
@@ -29,12 +31,13 @@
         <div class="search-container">
             <form id="search-form">
                 <select>
-                    <option>Nome</option>
-                    <option>Teste 2</option>
-                    <option>Teste 3</option>
+                    <option>Name</option>
+                    <option>Field 2</option>
+                    <option>Filler Text</option>
                 </select>
                 <input type="text" placeholder="Insira sua pesquisa aqui!">
                 <input type="submit" value="Pesquisar">
+                <!--input type="submit" style="background-image: linear-gradient(to right,yellow, red); font-size: 16px; color:black;" value="BRUH"-->
             </form>
             <div class="night-mode-container" onclick="toggleNightMode(true)">
                 <img id="moon" src="./svg/moon_stars_24dp_191919_FILL0_wght400_GRAD0_opsz24.svg">
@@ -43,13 +46,22 @@
             <div class="nav-button-container" onclick="hideNavbar()">
                 <img id="nav-button" src="./svg/menu_24dp_191919.svg">
             </div>
-            <div class="user-container">
+            <div class="user-container" onclick="displaySettings()">
                 <span>Jane Doe</span>
                 <img src="./img/user.png">
             </div>
+            <div id="settings" class="settings-container settings-hidden">
+                <a href="#"><span>Account Settings</span></a>
+                <div class="settings-double">
+                <a href="#" onclick="toggleNightMode(true)"><span>Dark Mode</span></a>
+                <a href="#" onclick="toggleLargerTable(true)"><span>Larger Table</span></a>
+                </div>
+                <a href="#"><span>Creative Filler Text</span></a>
+                <a href="#" class="flex-end"><span>Logout</span></a>
+            </div>
         </div>
         <div class="main-container" id="main-container">
-            <table class="">
+            <table class="" id="table">
                 <tr>
                     <th>Teste</th>
                     <th>Knocky</th>

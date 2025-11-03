@@ -104,7 +104,6 @@ nav ul li a:hover
 {
     margin-left: var(--nav-width);
     height: 100vh;
-    overflow-y: scroll;
     transition: 0.1s;
 }
 .nav-disabled
@@ -121,6 +120,7 @@ nav ul li a:hover
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 2;
 }
 
 .search-container input[type="text"]
@@ -156,6 +156,66 @@ nav ul li a:hover
     cursor: pointer;
 }
 
+.settings-container
+{
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    top: 80px;
+    right: 0px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: 0.3s;
+    transition-behavior: allow-discrete;
+    overflow: hidden;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.settings-container a
+{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: calc(100% - 16px);
+    border-radius: 10px;
+    margin-bottom: 7px;
+    background-color: rgb(244, 244, 244);
+    padding: 8px;
+}
+.settings-double
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.settings-double a
+{
+    width: 43.5%;
+}
+.settings-container a:hover
+{
+    background-color: rgb(233, 233, 233);
+}
+.settings-container a span
+{
+    font-family: "Roboto";
+}
+.settings-hidden
+{
+    /* se no final tudo der merda victor, bota um display: none - ass. victor do passado */
+    height: 0;
+    transition-behavior: allow-discrete;
+    transition: 0.3s;
+    padding: 0;
+}
+a.flex-end 
+{
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
 .night-mode-container
 {
     margin-left: auto;
@@ -187,6 +247,7 @@ nav ul li a:hover
     align-items: center;
     justify-content: center;
     margin-right: 16px;
+    cursor: pointer;
 }
 .user-container span
 {
@@ -204,7 +265,7 @@ nav ul li a:hover
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 23px 0px;
+    padding: 23px;
 
     /* mude os pixeis no calculo da altura para corresponder à altura
        da barra de pesquisa  */
@@ -226,10 +287,13 @@ table
     margin: 0;
     padding: 0;
     border: 0;
+
+    /* following lines for border-radius */
     border-spacing: 0;
     border-collapse: separate;
     overflow: hidden;
     border-radius: 10px;
+
     font-family: "Roboto-Regular";
 }
 .max-width

@@ -34,3 +34,16 @@ nav ul li a:hover
     background-color: rgb(40, 40, 40);
     color: white;
 }
+.settings-container
+{
+    background-color: #101010;
+}
+.settings-container a
+{
+    background-color: #1d1d1d;
+    color: white;
+}
+.settings-container a:hover
+{
+    background-color: rgb(40, 40, 40);
+}
